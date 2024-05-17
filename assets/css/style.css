@@ -777,7 +777,8 @@ section {
 }
 
 .services .icon-box:hover {
-  border-color: #ffb727;
+  border-color: #ffb727 ;
+  border-width: 3px;
 }
 
 .services .icon-box:hover .title a {
