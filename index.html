@@ -6,8 +6,9 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
   <title>Darshan Bhaiya</title>
-  <meta content="" name="description" />
-  <meta content="" name="keywords" />
+  <meta content="Experienced Software Engineer, Data Scientist, Web Developer, Machine Learning Engineer, and Analyst specializing in Python, JavaScript, Java, SQL, HTML, CSS, TensorFlow, PyTorch, React.js, Node.js, data visualization, Docker" name="description" />
+  <meta content="software engineering, data science, web development, machine learning, analysis, Python, JavaScript, Java, SQL, HTML, CSS, TensorFlow, PyTorch, React.js, MongoDb, Express.js, Tableau, Power BI, DSA,   Node.js, data visualization, Docker, agile methodology, data structures, algorithms" name="keywords" />
+
 
   <!-- Favicons -->
   <link href="assets/img/DarshanImage.jpg" rel="icon" />
@@ -27,9 +28,25 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet" />
+
+  <style>
+   
+  </style>
+  
 </head>
 
 <body>
+
+
+  <!-- Loader -->
+  <div id="loader-wrapper">
+    <div id="loop" class="center"></div>
+    <div id="bike-wrapper" class="center">
+      <div id="bike" class="centerBike"></div>
+    </div>
+  </div>
+
+
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top d-flex justify-content-center align-items-center header-transparent">
     <nav id="navbar" class="navbar">
@@ -683,6 +700,23 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <!-- Hide loader script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var loaderWrapper = document.getElementById('loader-wrapper');
+  
+      // Show loader
+      loaderWrapper.style.display = 'block';
+  
+      // Hide loader after 4 seconds (4000 milliseconds)
+      setTimeout(function () {
+        loaderWrapper.style.display = 'none';
+      }, 3000);
+    });
+  </script>
+
+
 </body>
 
 </html>
