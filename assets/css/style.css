@@ -897,8 +897,8 @@
  }
 
  .services .icon-box:hover {
-  box-shadow: 0 0 11px #ffb727; 
-  border:none;
+   box-shadow: 0 0 11px #ffb727;
+   border: none;
  }
 
  .services .icon-box:hover .title a {
@@ -1505,4 +1505,3 @@
    font-size: 13px;
  }
 
- 
