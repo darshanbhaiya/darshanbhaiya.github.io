@@ -703,16 +703,13 @@
 
   <!-- Hide loader script -->
   <script>
-    document.addEventListener('DOMContentLoaded', function () {
+    window.addEventListener('load', function () {
       var loaderWrapper = document.getElementById('loader-wrapper');
-  
-      // Show loader
-      loaderWrapper.style.display = 'block';
-  
-      // Hide loader after 4 seconds (4000 milliseconds)
-      setTimeout(function () {
+      
+      // Hide loader 3 seconds after all files are loaded
+      setTimeout(function() {
         loaderWrapper.style.display = 'none';
-      }, 3000);
+      }, 3000); // 3000 milliseconds = 3 seconds
     });
   </script>
 
