@@ -713,7 +713,7 @@
  }
 
  .about .image {
-   background: url("../img/AboutDarshan.png") center center no-repeat;
+   background: url("../img/AboutDarshanNew.jpeg") center center no-repeat;
    background-size: cover;
    min-height: 500px;
    border-radius: 10px;
@@ -850,7 +850,8 @@
    box-shadow: 0 10px 29px 0 rgba(68, 88, 144, 0.1);
    transition: all 0.3s ease-in-out;
    text-align: left;
-   border: 1px solid #ffb727;
+   border: 2px solid #ffb727;
+   border-radius: 10px;
  }
 
 
