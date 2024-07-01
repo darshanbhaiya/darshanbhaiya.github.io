@@ -1304,8 +1304,9 @@
  .contact .info-box p {
    padding: 0;
    line-height: 24px;
-   font-size: 14px;
+   font-size: 18px;
    margin-bottom: 0;
+   cursor: text;
  }
 
  .contact .social-links {
