@@ -810,6 +810,11 @@
    padding-left: 20px;
  }
 
+ .resume .resume-item  {
+   color:black;
+   font-weight: 450;
+ }
+
  .resume .resume-item ul li {
    padding-bottom: 10px;
  }
