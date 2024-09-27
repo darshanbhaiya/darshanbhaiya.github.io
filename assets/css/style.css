@@ -910,6 +910,10 @@
  .services .icon-box:hover .title a {
    color: #ffb727;
  }
+ .services .portfolio-wrap img {
+   border: solid grey 2px;
+   border-radius: 10px;
+ }
 
  /*--------------------------------------------------------------
 # Testimonials
