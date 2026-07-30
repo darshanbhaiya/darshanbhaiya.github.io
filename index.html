@@ -1,997 +1,2094 @@
 <!DOCTYPE html>
 <html lang="en">
-  
-
 <head>
-
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-C7CEGGY1X0"></script>
-  <script>
-
-    
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-C7CEGGY1X0');
-  </script>
-
+  <!-- Meta Tags -->
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Darshan Bhaiya | Solution Integration & Data Scientist</title>
 
-  <title>Darshan Bhaiya</title>
-  <meta
-    content="Experienced Software Engineer, Data Scientist, Web Developer, Machine Learning Engineer, and Analyst specializing in Python, JavaScript, Java, SQL, HTML, CSS, TensorFlow, PyTorch, React.js, Node.js, data visualization, Docker"
-    name="description" />
-  <meta
-    content="software engineering, data science, web development, machine learning, analysis, Python, JavaScript, Java, SQL, HTML, CSS, TensorFlow, PyTorch, React.js, MongoDb, Express.js, Tableau, Power BI, DSA,   Node.js, data visualization, Docker, agile methodology, data structures, algorithms"
-    name="keywords" />
+  <!-- SEO Meta Tags -->
+  <meta content="Experienced Software Engineer, Data Scientist, Web Developer, Machine Learning Engineer, and Analyst specializing in Python, JavaScript, Java, SQL, HTML, CSS, TensorFlow, PyTorch, React.js, Node.js, data visualization, Docker" name="description" />
+  <meta content="software engineering, data science, web development, machine learning, analysis, Python, JavaScript, Java, SQL, HTML, CSS, TensorFlow, PyTorch, React.js, MongoDb, Express.js, Tableau, Power BI, DSA, Node.js, data visualization, Docker, agile methodology, data structures, algorithms" name="keywords" />
 
-  <meta name="google-adsense-account" content="ca-pub-7118501973423931">  
-
-  <!-- Favicons -->
+  <!-- Favicon -->
   <link href="assets/img/DarshanImage.jpg" rel="icon" />
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
 
-  <!-- Google Fonts -->
-  <link
-    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Satisfy"
-    rel="stylesheet" />
+  <!-- Google Fonts Preconnect for Performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+  <!-- External Stylesheets -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+  <style>
+    /* ═══════════════════════════════════════════════════════════
+       CSS CUSTOM PROPERTIES (BLACK & WHITE THEME)
+       ═══════════════════════════════════════════════════════════ */
+    :root {
+      /* Color Palette - Black & White Theme */
+      --bg-main: #ffffff;
+      --surface: #ffffff;
+      --surface-soft: #f7f7f7;
+      
+      /* Primary Colors - Black */
+      --accent-primary: #111111;
+      --accent-secondary: #4a4a4a;
+      
+      /* Text Colors */
+      --text-main: #111111;
+      --text-muted: #555555;
+      
+      /* Border & Shadow */
+      --border-color: #dddddd;
+      --shadow-soft: 0 18px 45px rgba(0, 0, 0, 0.08);
+      
+      /* Layout Measurements */
+      --header-height: 86px;
+    }
 
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet" />
+
+    /* ═══════════════════════════════════════════════════════════
+       GLOBAL RESETS & BASE STYLES
+       ═══════════════════════════════════════════════════════════ */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: var(--header-height);
+    }
+
+    body {
+      min-width: 320px;
+      /* Pure white background */
+      background: #ffffff;
+      color: var(--text-main);
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+      text-rendering: optimizeLegibility;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 700;
+      letter-spacing: 0;
+    }
+
+    /* ═══════════════════════════════════════════════════════════
+       HEADER & NAVIGATION
+       ═══════════════════════════════════════════════════════════ */
+
+
+    /* Fixed Navigation Bar */
+    header {
+      position: fixed;
+      inset: 0 0 auto 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.95);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      z-index: 1000;
+    }
+
+    /* Navigation Container - Flexbox Layout */
+    .nav-container {
+      width: min(100%, 1200px);
+      min-height: var(--header-height);
+      margin: 0 auto;
+      padding: 0 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1.25rem;
+    }
+
+    /* Logo - Dancing Script Font */
+    .logo {
+      flex: 0 0 auto;
+      font-family: 'Dancing Script', cursive;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--text-main);
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    /* Navigation Menu */
+    nav {
+      flex: 1 1 auto;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      list-style: none;
+      gap: 1.35rem;
+    }
+
+    /* Navigation Links with Underline Hover Effect */
+    nav a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 600;
+      position: relative;
+      display: inline-flex;
+      min-height: 44px;
+      align-items: center;
+    }
+
+    /* Animated Underline on Hover */
+    nav a::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      bottom: 5px;
+      left: 0;
+      height: 2px;
+      background: var(--accent-primary);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.25s ease;
+    }
+
+    nav a:hover,
+    nav a:focus-visible,
+    nav a.active {
+      color: var(--text-main);
+    }
+
+    nav a:hover::after,
+    nav a:focus-visible::after {
+      transform: scaleX(1);
+    }
+
+    /* Primary Navigation Button & Hero CTAs */
+    .btn-nav,
+    .hero-link {
+      border: 0;
+      background: var(--accent-primary);
+      color: #ffffff;
+      min-height: 44px;
+      padding: 0.75rem 1rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.55rem;
+      font-size: 0.92rem;
+      font-weight: 700;
+      text-decoration: none;
+      border-radius: 8px;
+      box-shadow: 0 12px 24px rgba(17, 17, 17, 0.22);
+      transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+      white-space: nowrap;
+    }
+
+    .btn-nav:hover,
+    .btn-nav:focus-visible,
+    .hero-link:hover,
+    .hero-link:focus-visible {
+      background: #000000;
+      transform: translateY(-2px);
+      box-shadow: 0 16px 30px rgba(17, 17, 17, 0.28);
+    }
+
+    /* Mobile Menu Toggle Button */
+    .mobile-menu-toggle {
+      display: none;
+      width: 44px;
+      height: 44px;
+      flex: 0 0 44px;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      background: var(--surface);
+      color: var(--text-main);
+      cursor: pointer;
+      font-size: 1.1rem;
+    }
+
+    /* Focus Visible Outline for Accessibility */
+    .mobile-menu-toggle:focus-visible,
+    a:focus-visible,
+    button:focus-visible {
+      outline: 3px solid rgba(17, 17, 17, 0.28);
+      outline-offset: 3px;
+    }
+
+    /* ═══════════════════════════════════════════════════════════
+       HERO SECTION
+       ═══════════════════════════════════════════════════════════ */
+    #hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: calc(var(--header-height) + 3rem) 2rem 4rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-shell {
+      width: min(100%, 940px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Hero Heading - Dancing Script */
+    #hero h1 {
+      font-family: 'Dancing Script', cursive;
+      font-size: 6rem;
+      line-height: 1.02;
+      margin-bottom: 0.65rem;
+      color: var(--text-main);
+    }
+
+    /* Hero Subheading with Typed.js Animation */
+    #hero h2 {
+      max-width: 780px;
+      font-size: 1.8rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+    }
+
+    /* Typing Animation Target */
+    .typing {
+      color: var(--accent-primary);
+      font-weight: 700;
+    }
+
+    /* Hero Action Buttons Container */
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.8rem;
+    }
+
+    /* Secondary Button Style (Outlined) */
+    .hero-link.secondary {
+      background: var(--surface);
+      color: var(--text-main);
+      border: 1px solid var(--border-color);
+      box-shadow: none;
+    }
+
+    .hero-link.secondary:hover,
+    .hero-link.secondary:focus-visible {
+      background: var(--surface-soft);
+      box-shadow: 0 12px 24px rgba(16, 24, 40, 0.08);
+    }
+
+    /* ═══════════════════════════════════════════════════════════
+       MAIN SECTIONS - GLOBAL STYLES
+       ═══════════════════════════════════════════════════════════ */
+    main {
+      position: relative;
+      z-index: 1;
+    }
+
+    section {
+      width: min(100%, 1200px);
+      margin: 0 auto;
+      padding: 6rem 2rem;
+    }
+
+    /* Section Title with Underline Accent */
+    .section-title {
+      color: var(--text-main);
+      font-size: 2.5rem;
+      line-height: 1.15;
+      margin-bottom: 3rem;
+      position: relative;
+      display: inline-block;
+    }
+
+    /* Gradient Underline Accent */
+    .section-title::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -14px;
+      width: 64px;
+      height: 4px;
+      background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+      border-radius: 999px;
+    }
+
+    /* ═══════════════════════════════════════════════════════════
+       ABOUT SECTION
+       ═══════════════════════════════════════════════════════════ */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 3.5rem;
+      align-items: center;
+      max-width: 1100px;
+    }
+
+    /* About Text Content */
+    .about-text p {
+      color: var(--text-muted);
+      font-size: 1.08rem;
+      line-height: 1.85;
+      font-weight: 400;
+    }
+
+    /* First Paragraph - Emphasized */
+    .about-text p:first-of-type {
+      font-size: 1.22rem;
+      color: var(--text-main);
+      font-weight: 600;
+      line-height: 1.6;
+    }
+
+    .about-text strong {
+      color: var(--text-main);
+      font-weight: 700;
+    }
+
+    /* About Photo Card */
+    .about-photo-card {
+      border-radius: 20px;
+      overflow: hidden;
+      aspect-ratio: 4 / 5;
+      box-shadow: 0 20px 50px rgba(16, 24, 40, 0.10);
+    }
+
+    .about-photo-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+
+    /* ═══════════════════════════════════════════════════════════
+       SHARED CARD STYLES (Bento, Project, Contact Cards)
+       ═══════════════════════════════════════════════════════════ */
+    .bento-card,
+    .project-card,
+    .contact-container {
+      background: rgba(255, 255, 255, 0.82);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      box-shadow: 0 12px 30px rgba(16, 24, 40, 0.05);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+
+    /* ═══════════════════════════════════════════════════════════
+       TIMELINE (EXPERIENCE & EDUCATION SECTIONS)
+       ═══════════════════════════════════════════════════════════ */
+    .tl-wrap {
+      position: relative;
+      max-width: 920px;
+    }
+
+    /* Vertical Spine/Line */
+    .tl-wrap::before {
+      content: '';
+      position: absolute;
+      left: 23px;
+      top: 10px;
+      bottom: 10px;
+      width: 2px;
+      background: linear-gradient(180deg, #111 0%, rgba(17, 17, 17, 0.10) 100%);
+      border-radius: 2px;
+    }
+
+    /* Individual Timeline Entry */
+    .tl-item {
+      position: relative;
+      padding-left: 3.5rem;
+      padding-bottom: 0;
+      margin-bottom: 1.5rem;
+    }
+
+    .tl-item:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Timeline Dot on Spine */
+    .tl-dot {
+      position: absolute;
+      left: 16px;
+      top: 18px;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: #111111;
+      border: 3px solid #ffffff;
+      box-shadow: 0 0 0 2px #111111;
+      z-index: 1;
+    }
+
+    /* Timeline Card Container */
+    .tl-card {
+      background: #ffffff;
+      border: 1px solid #e5e5e5;
+      border-radius: 14px;
+      padding: 1.6rem 1.75rem 1.75rem;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+      transition: box-shadow 0.25s ease, transform 0.25s ease;
+    }
+
+    .tl-card:hover {
+      box-shadow: 0 10px 32px rgba(0, 0, 0, 0.09);
+      transform: translateY(-2px);
+    }
+
+    /* Card Header - Role and Date Badges */
+    .tl-card-header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 0.75rem;
+      margin-bottom: 0.2rem;
+    }
+
+    /* Role/Position Title */
+    .tl-role {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 1.18rem;
+      font-weight: 700;
+      color: #111111;
+      line-height: 1.3;
+      margin: 0;
+    }
+
+    /* Badge Group Container */
+    .tl-badge-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      flex-shrink: 0;
+    }
+
+    /* Date and Type Badges */
+    .tl-badge {
+      display: inline-flex;
+      align-items: center;
+      height: 26px;
+      background: #111111;
+      color: #ffffff;
+      padding: 0 0.75rem;
+      border-radius: 999px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    /* Employment Type Badge (Outlined) */
+    .tl-badge.tl-badge-type {
+      background: transparent;
+      color: #555555;
+      border: 1px solid #cccccc;
+    }
+
+    /* Company/Institution Row */
+    .tl-org-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.5rem 0.85rem;
+      margin-top: 0.35rem;
+      margin-bottom: 1rem;
+    }
+
+    /* Organization Name */
+    .tl-org {
+      font-size: 0.97rem;
+      font-weight: 600;
+      color: #444444;
+    }
+
+    /* Location with Icon */
+    .tl-loc {
+      font-size: 0.84rem;
+      color: #888888;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    .tl-loc i {
+      font-size: 0.76rem;
+    }
+
+    /* Separator Dot */
+    .tl-org-sep {
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: #cccccc;
+      display: inline-block;
+      flex-shrink: 0;
+    }
+
+    /* Divider Inside Card */
+    .tl-divider {
+      border: none;
+      border-top: 1px dashed rgba(17, 17, 17, 0.12);
+      margin: 0 0 1.1rem;
+    }
+
+    /* Timeline Bullet List (Experience Points) */
+    .timeline-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .timeline-list li {
+      color: #444444;
+      font-size: 0.94rem;
+      line-height: 1.78;
+      padding-left: 1.4rem;
+      position: relative;
+    }
+
+    /* Custom Bullet Point */
+    .timeline-list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.68em;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #bbbbbb;
+    }
+
+    .timeline-list strong {
+      color: #111111;
+      font-weight: 700;
+    }
+
+    /* Education Score/Grade Pill */
+    .tl-score {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      margin-top: 0.55rem;
+      background: #f5f5f5;
+      border: 1px solid #e0e0e0;
+      border-radius: 999px;
+      padding: 0.3rem 0.85rem;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #333333;
+    }
+
+    .tl-score i {
+      font-size: 0.78rem;
+      color: #888888;
+    }
+
+    /* Education Degree Line */
+    .tl-degree {
+      font-size: 1.0rem;
+      font-weight: 600;
+      color: #555555;
+      margin-top: 0.1rem;
+      line-height: 1.45;
+    }
+
+
+    /* ═══════════════════════════════════════════════════════════
+       SKILLS SECTION - BENTO GRID LAYOUT
+       ═══════════════════════════════════════════════════════════ */
+    .bento-skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 1.4rem;
+    }
+
+    /* Individual Skill Bento Card */
+    .bento-card {
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    /* Icon Container */
+    .card-icon {
+      font-size: 1.55rem;
+      color: var(--accent-primary);
+      margin-bottom: 1.2rem;
+      background: var(--surface-soft);
+      width: 56px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+    }
+
+    .bento-card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 1.25rem;
+      color: var(--text-main);
+    }
+
+    /* Skill Tags Container */
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+    }
+
+    /* Individual Skill Tag */
+    .skill-tags span {
+      padding: 0.55rem 0.85rem;
+      border-radius: 8px;
+      background: rgba(17, 17, 17, 0.08);
+      color: var(--text-muted);
+      font-size: 0.88rem;
+      font-weight: 700;
+      border: 1px solid rgba(17, 17, 17, 0.12);
+    }
+
+    /* ═══════════════════════════════════════════════════════════
+       PROJECTS SECTION - CAROUSEL
+       ═══════════════════════════════════════════════════════════ */
+    .carousel-container {
+      position: relative;
+      display: flex;
+      align-items: center;
+      width: 100%;
+    }
+
+    .projects-carousel-wrapper {
+      width: 100%;
+      overflow: hidden;
+    }
+
+    /* Horizontal Scrollable Track */
+    .projects-track {
+      display: flex;
+      gap: 1.25rem;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      padding: 1.25rem 0.35rem;
+      scrollbar-width: none; /* Firefox */
+      -ms-overflow-style: none; /* IE/Edge */
+      scroll-snap-type: x mandatory;
+    }
+
+    /* Hide Scrollbar - Webkit */
+    .projects-track::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* Individual Project Card */
+    .project-card {
+      width: 360px;
+      flex: 0 0 360px;
+      scroll-snap-align: start;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      background: #ffffff;
+      border: none;
+      border-radius: 14px;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    /* Project Image/Media Container */
+    .project-media {
+      aspect-ratio: 16 / 9;
+      background: #f3f3f3;
+      border-bottom: none;
+      overflow: hidden;
+    }
+
+    .project-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    /* Project Details Section */
+    .project-info {
+      padding: 1.4rem 1.5rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    /* Project Title */
+    .project-info h4 {
+      font-size: 1.12rem;
+      line-height: 1.35;
+      margin-bottom: 0.7rem;
+      color: #111111;
+    }
+
+    .project-info h4 a {
+      color: #111111;
+      text-decoration: none;
+    }
+
+    .project-info h4 a:hover,
+    .project-info h4 a:focus-visible {
+      color: #333333;
+    }
+
+    /* Technology Stack Badge */
+    .tech-stack-text {
+      width: fit-content;
+      max-width: 100%;
+      font-size: 0.78rem;
+      color: #111111;
+      margin-bottom: 0.95rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      background: #f3f3f3;
+      padding: 0.36rem 0.65rem;
+      border-radius: 8px;
+      line-height: 1.35;
+      border: none;
+    }
+
+    /* Project Description */
+    .project-desc {
+      color: #444444;
+      font-size: 0.95rem;
+      margin-bottom: 1.2rem;
+      flex-grow: 1;
+      line-height: 1.7;
+    }
+
+    /* Project Links (GitHub, Live Demo) */
+    .project-links {
+      display: flex;
+      gap: 0.65rem;
+      font-size: 0.86rem;
+      flex-wrap: wrap;
+    }
+
+    .project-links a {
+      color: #111111;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.42rem;
+      min-height: 40px;
+      padding: 0.48rem 0.8rem;
+      border-radius: 8px;
+      background: #f3f3f3;
+      border: none;
+      transition: color 0.25s ease, background-color 0.25s ease, transform 0.25s ease;
+      font-weight: 700;
+    }
+
+    .project-links a:hover,
+    .project-links a:focus-visible {
+      color: #ffffff;
+      background: #111111;
+      transform: translateY(-2px);
+    }
+
+    /* Carousel Navigation Buttons */
+    .scroll-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: var(--text-main);
+      color: #ffffff;
+      border: none;
+      border-radius: 50%;
+      width: 46px;
+      height: 46px;
+      cursor: pointer;
+      z-index: 10;
+      box-shadow: 0 10px 24px rgba(16, 24, 40, 0.18);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+    }
+
+    .scroll-btn:hover,
+    .scroll-btn:focus-visible {
+      background: var(--accent-primary);
+    }
+
+    .left-btn {
+      left: -14px;
+    }
+
+    .right-btn {
+      right: -14px;
+    }
+
+
+    /* ═══════════════════════════════════════════════════════════
+       CONTACT SECTION
+       ═══════════════════════════════════════════════════════════ */
+    .contact-container {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 2.5rem;
+      padding: 2.5rem;
+      overflow: hidden;
+    }
+
+    .contact-info-block h3,
+    .contact-container h3 {
+      margin-bottom: 0.85rem;
+      font-size: 1.25rem;
+    }
+
+    .contact-info-block p,
+    .contact-container p {
+      color: var(--text-muted);
+      margin-bottom: 1.45rem;
+    }
+
+    /* Contact Methods List */
+    .contact-methods {
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+    }
+
+    /* Individual Contact Method (Email, Phone) */
+    .contact-method-item {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      min-width: 0;
+      text-decoration: none;
+      color: var(--text-main);
+      transition: background-color 0.25s ease, transform 0.25s ease;
+      padding: 0.75rem;
+      border-radius: 8px;
+      border: 1px solid transparent;
+    }
+
+    .contact-method-item:hover,
+    .contact-method-item:focus-visible {
+      background: var(--surface-soft);
+      border-color: rgba(17, 17, 17, 0.12);
+      transform: translateX(4px);
+    }
+
+    /* Contact Method Icon */
+    .contact-method-item i {
+      flex: 0 0 46px;
+      font-size: 1.15rem;
+      color: var(--accent-primary);
+      background: rgba(17, 17, 17, 0.08);
+      border-radius: 8px;
+      width: 46px;
+      height: 46px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .contact-method-item span {
+      min-width: 0;
+      overflow-wrap: anywhere;
+      font-weight: 600;
+    }
+
+    /* Social Media Links Row */
+    .social-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.85rem;
+      margin-top: 1.5rem;
+    }
+
+    .social-row a {
+      color: var(--text-muted);
+      font-size: 1.35rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      border-radius: 8px;
+      background: var(--surface);
+      border: 1px solid var(--border-color);
+      text-decoration: none;
+      transition: color 0.25s ease, background-color 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+    }
+
+    .social-row a:hover,
+    .social-row a:focus-visible {
+      color: #ffffff;
+      background: var(--accent-primary);
+      border-color: var(--accent-primary);
+      transform: translateY(-3px);
+    }
+
+    /* ═══════════════════════════════════════════════════════════
+       FOOTER
+       ═══════════════════════════════════════════════════════════ */
+    footer {
+      border-top: 1px solid var(--border-color);
+      padding: 7rem 2rem;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+                  url('assets/img/footerImage.jpg') center / cover no-repeat;
+    }
+
+    footer p {
+      margin-bottom: 0.8rem;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    footer p:first-child {
+      color: rgba(255, 255, 255, 0.65);
+      font-style: italic;
+    }
+
+    /* Dancing Script Signature */
+    .signature {
+      font-family: 'Dancing Script', cursive;
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    /* ═══════════════════════════════════════════════════════════
+       HOVER EFFECTS (Desktop Only)
+       ═══════════════════════════════════════════════════════════ */
+    @media (hover: hover) {
+      /* Bento & Project Card Lift on Hover */
+      .bento-card:hover,
+      .project-card:hover {
+        transform: scale(1.03) translateY(-6px);
+        z-index: 2;
+        box-shadow: 0 12px 36px rgba(0, 0, 0, 0.15);
+      }
+
+      /* Icon Background Change on Card Hover */
+      .bento-card:hover .card-icon {
+        background: var(--accent-primary);
+        color: #ffffff;
+      }
+
+      /* Skill Tag Hover Effect */
+      .skill-tags span:hover {
+        background: var(--accent-primary);
+        color: #ffffff;
+        border-color: var(--accent-primary);
+      }
+    }
+
+    /* ═══════════════════════════════════════════════════════════
+       RESPONSIVE DESIGN - TABLET & MOBILE
+       ═══════════════════════════════════════════════════════════ */
+    
+    /* About Section - Tablet Breakpoint */
+    @media (max-width: 820px) {
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .about-photo-card {
+        aspect-ratio: 16 / 9;
+        max-width: 480px;
+      }
+    }
+
+    /* About Section - Mobile Breakpoint */
+    @media (max-width: 480px) {
+      .about-photo-card {
+        max-width: 100%;
+        aspect-ratio: 4 / 3;
+      }
+
+      .about-text p:first-of-type {
+        font-size: 1.08rem;
+      }
+    }
+
+    /* Large Screens - Two-Column Skills Card */
+    @media (min-width: 768px) {
+      .bento-card.focus-card {
+        grid-column: span 2;
+      }
+    }
+
+    /* Navigation - Tablet */
+    @media (max-width: 1080px) {
+      .nav-container {
+        padding: 0 1.5rem;
+      }
+
+      nav ul {
+        gap: 0.85rem;
+      }
+
+      nav a {
+        font-size: 0.88rem;
+      }
+    }
+
+
+    /* Navigation - Medium to Small Tablets */
+    @media (max-width: 900px) {
+      :root {
+        --header-height: 76px;
+      }
+
+      .nav-container {
+        min-height: var(--header-height);
+        flex-wrap: wrap;
+        gap: 0.7rem;
+        padding: 0.75rem 1.2rem;
+      }
+
+      .logo {
+        font-size: 1.8rem;
+      }
+
+      /* Show Mobile Menu Toggle */
+      .mobile-menu-toggle {
+        display: inline-flex;
+        order: 3;
+      }
+
+      .btn-nav {
+        margin-left: auto;
+        padding: 0.7rem 0.9rem;
+      }
+
+      nav {
+        order: 4;
+        flex: 1 0 100%;
+      }
+
+      /* Mobile Menu - Hidden by Default, Grid Layout When Open */
+      nav ul {
+        display: none;
+        width: 100%;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.55rem;
+        padding: 0.65rem 0 0.35rem;
+      }
+
+      nav ul.is-open {
+        display: grid;
+      }
+
+      /* Mobile Menu Links - Full Button Style */
+      nav a {
+        justify-content: center;
+        min-height: 46px;
+        padding: 0.55rem 0.7rem;
+        border-radius: 8px;
+        background: var(--surface);
+        border: 1px solid var(--border-color);
+      }
+
+      /* Remove Underline Effect on Mobile */
+      nav a::after {
+        display: none;
+      }
+
+      #hero {
+        padding-top: calc(var(--header-height) + 5rem);
+      }
+
+      #hero h1 {
+        font-size: 4.5rem;
+      }
+
+      #hero h2 {
+        font-size: 1.45rem;
+      }
+
+      section {
+        padding: 4.6rem 1.5rem;
+      }
+
+      .section-title {
+        font-size: 2.2rem;
+      }
+
+      .bento-card {
+        padding: 1.65rem;
+      }
+
+      .project-card {
+        width: 300px;
+        flex-basis: 300px;
+      }
+
+      .contact-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 2rem;
+      }
+    }
+
+    /* Mobile - Primary Breakpoint */
+    @media (max-width: 640px) {
+      :root {
+        --header-height: 72px;
+      }
+
+      body {
+        font-size: 15px;
+      }
+
+      .nav-container {
+        padding: 0.7rem 1rem;
+      }
+
+      .logo {
+        max-width: 155px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 1.65rem;
+      }
+
+      /* Compact Resume Button on Mobile */
+      .btn-nav {
+        min-width: 44px;
+        padding: 0.68rem;
+      }
+
+      .btn-nav span {
+        display: none; /* Hide text, show only icon */
+      }
+
+      /* Single Column Navigation on Small Screens */
+      nav ul {
+        grid-template-columns: 1fr;
+      }
+
+      #hero {
+        min-height: auto;
+        padding: calc(var(--header-height) + 3rem) 1rem 3.5rem;
+      }
+
+      #hero h1 {
+        font-size: 3.55rem;
+      }
+
+      #hero h2 {
+        font-size: 1.18rem;
+        margin-bottom: 1.5rem;
+      }
+
+      /* Stack Hero Buttons Vertically */
+      .hero-actions {
+        width: 100%;
+        flex-direction: column;
+      }
+
+      .hero-link {
+        width: 100%;
+      }
+
+      section {
+        padding: 3.5rem 1rem;
+      }
+
+      .section-title {
+        font-size: 1.85rem;
+        margin-bottom: 2.4rem;
+      }
+
+      .about-text p,
+      .about-text p:first-of-type {
+        font-size: 1rem;
+        line-height: 1.75;
+      }
+
+      .bento-card,
+      .contact-container {
+        padding: 1.2rem;
+      }
+
+      .tl-role {
+        font-size: 1.05rem;
+      }
+
+      .tl-degree {
+        font-size: 0.92rem;
+      }
+
+      .timeline-list li {
+        font-size: 0.88rem;
+      }
+
+      .tl-card {
+        padding: 1.2rem 1.3rem 1.4rem;
+      }
+
+      /* Single Column Skills Grid */
+      .bento-skills-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+
+      .bento-card.focus-card {
+        grid-column: auto;
+      }
+
+      .skill-tags {
+        gap: 0.5rem;
+      }
+
+      .skill-tags span {
+        font-size: 0.82rem;
+        padding: 0.5rem 0.7rem;
+      }
+
+      /* Projects - Switch from Carousel to Stacked Grid */
+      .carousel-container {
+        display: block;
+      }
+
+      .projects-carousel-wrapper {
+        overflow: visible;
+      }
+
+      .projects-track {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        overflow: visible;
+        padding: 0;
+        scroll-snap-type: none;
+      }
+
+      .project-card {
+        width: 100%;
+        flex-basis: auto;
+      }
+
+      .project-info {
+        padding: 1.1rem;
+      }
+
+      .project-links a {
+        flex: 1 1 auto;
+      }
+
+      /* Hide Carousel Navigation on Mobile */
+      .scroll-btn {
+        display: none;
+      }
+
+      .contact-method-item {
+        align-items: flex-start;
+      }
+
+      footer {
+        padding: 5rem 1rem;
+      }
+    }
+
+    /* Extra Small Mobile Devices */
+    @media (max-width: 380px) {
+      .logo {
+        max-width: 135px;
+      }
+
+      #hero h1 {
+        font-size: 3.05rem;
+      }
+
+      .mobile-menu-toggle,
+      .btn-nav {
+        width: 42px;
+        height: 42px;
+        min-height: 42px;
+      }
+    }
+
+    /* ═══════════════════════════════════════════════════════════
+       ACCESSIBILITY - REDUCED MOTION
+       ═══════════════════════════════════════════════════════════ */
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
 </head>
 
 <body>
-  <!-- Loader -->
-  <div id="loader-wrapper">
-    <div id="loop" class="center"></div>
-    <div id="bike-wrapper" class="center">
-      <div id="bike" class="centerBike"></div>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       HEADER - Fixed Navigation Bar
+       ═══════════════════════════════════════════════════════════ -->
+  <header>
+    <div class="nav-container">
+      <!-- Logo/Brand -->
+      <a href="#hero" class="logo">Darshan Bhaiya</a>
+
+      <!-- Primary Navigation Menu -->
+      <nav aria-label="Primary navigation">
+        <ul id="primaryMenu">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#project">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Resume Button -->
+      <a href="https://drive.google.com/file/d/1MvT_ETecJTChvuT7RuwOXXlqrYDZBfx0/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn-nav" aria-label="View resume">
+        <i class="fas fa-file-lines" aria-hidden="true"></i>
+        <span>View Resume</span>
+      </a>
+
+      <!-- Mobile Menu Toggle -->
+      <button class="mobile-menu-toggle" type="button" aria-controls="primaryMenu" aria-expanded="false" aria-label="Open navigation menu">
+        <i class="fas fa-bars" aria-hidden="true"></i>
+      </button>
     </div>
-  </div>
-
-  <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top d-flex justify-content-center align-items-center header-transparent">
-    <nav id="navbar" class="navbar">
-      <ul>
-        <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-        <li><a class="nav-link scrollto" href="#about">About</a></li>
-        <li><a class="nav-link scrollto" href="#experience">Experience</a></li>
-        <li><a class="nav-link scrollto" href="#education">Education</a></li>
-        <li><a class="nav-link scrollto" href="#skills">Skills</a></li>
-        <li><a class="nav-link scrollto" href="#project">Projects</a></li>
-        <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-      </ul>
-      <i class="bi bi-list mobile-nav-toggle"></i>
-    </nav>
-    <!-- .navbar -->
   </header>
-  <!-- End Header -->
 
-  <!-- ======= Hero Section ======= -->
+  <!-- ═══════════════════════════════════════════════════════════
+       HERO SECTION - Landing Area
+       ═══════════════════════════════════════════════════════════ -->
   <section id="hero">
-    <div class="hero-container">
+    <div class="hero-shell">
       <h1>Darshan Bhaiya</h1>
-      <h2 style="color: #fff">
-        I'm <span class="typing" style="color: #ffc107"></span>
-      </h2>
-      <a href="#about" class="btn-scroll scrollto" title="Scroll Down"><i class="bx bx-chevron-down"></i></a>
+      <!-- Typed.js animated text appears in the span below -->
+      <h2>I'm a <span class="typing"></span></h2>
+      <div class="hero-actions" aria-label="Primary actions">
+        <a href="#project" class="hero-link"><i class="fas fa-code-branch" aria-hidden="true"></i>View Work</a>
+        <a href="#contact" class="hero-link secondary"><i class="fas fa-paper-plane" aria-hidden="true"></i>Contact Me</a>
+      </div>
     </div>
   </section>
-  <!-- End Hero -->
 
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-  <script type="text/javascript">
-    var typed = new Typed(".typing", {
-      strings: ["Coder", "Developer", "AI Enthusiast"],
-      loop: true,
-      typeSpeed: 65,
-      backSpeed: 65,
-    });
-  </script>
+  <!-- ═══════════════════════════════════════════════════════════
+       MAIN CONTENT AREA
+       ═══════════════════════════════════════════════════════════ -->
+  <main>
 
-  <main id="main">
-    <!-- ======= About Me Section ======= -->
-    <section id="about" class="about">
-      <div class="container">
-        <div class="row">
-          <div class="image col-lg-4 d-flex align-items-stretch justify-content-center justify-content-lg-start"></div>
-          <div class="col-lg-8 d-flex flex-column align-items-stretch">
-            <div class="section-title">
-              <h2>Darshan Bhaiya</h2>
-              <p>
-                I’m a bit of an introvert who loves solving problems and understand how things work. I want to make a difference by leveraging my skills in web dev, AI and analytics to contribute to meaningful projects. I’m always eager to learn, explore new ideas and connect with exciting people.
-              </p>
-              <br />
-              <a href="#contact"><button type="button" class="contact-button">
-                  Contact Me
-                </button></a>
-              <a href="https://drive.google.com/file/d/1p7Cg5terqyRqHeUCRUoVd4k_kNgrmyt4/view?usp=drive_link"
-                target="_blank"><button type="button" class="contact-button">
-                  Resume
-                </button></a>
+    <!-- ═══════════════════════════════════════════════════════════
+         ABOUT SECTION
+         ═══════════════════════════════════════════════════════════ -->
+    <section id="about">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-grid">
+        <!-- About Text Content -->
+        <div class="about-text">
+          <p>Performance-driven Data Engineer bridging US banking clients and core platforms to design scalable financial data solutions. Expert in entity data governance and automating ETL pipelines (PDI, SQL) to ensure data quality within secure infrastructures.</p>
+        </div>
+        <!-- About Photo -->
+        <div class="about-photo-card">
+          <img src="assets/img/DarshanImage.jpg" alt="Darshan Bhaiya portrait" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         EXPERIENCE SECTION - Timeline Layout
+         ═══════════════════════════════════════════════════════════ -->
+    <section id="experience">
+      <h2 class="section-title">Experience</h2>
+      <div class="tl-wrap">
+
+        <!-- Current Position -->
+        <!-- Current Position -->
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <div class="tl-card-header">
+              <h3 class="tl-role">Solution Integration Associate</h3>
+              <div class="tl-badge-group">
+                <span class="tl-badge">Jul 2025 – Present</span>
+                <span class="tl-badge tl-badge-type">Full-time</span>
+              </div>
             </div>
+            <div class="tl-org-row">
+              <span class="tl-org">Jonas Collections &amp; Recovery India Pvt. Ltd.</span>
+              <span class="tl-org-sep"></span>
+              <span class="tl-loc"><i class="fas fa-location-dot" aria-hidden="true"></i> Nagpur, India · Remote</span>
+            </div>
+            <hr class="tl-divider" />
+            <!-- Key Responsibilities -->
+            <ul class="timeline-list">
+              <li>Partnered directly with <strong>US Banking Clients</strong> to gather complex Entity Data Requirements and design tailored product solutions aligned with core financial data platforms.</li>
+              <li>Engineered scalable <strong>ETL Pipelines</strong> using <strong>Pentaho (PDI)</strong> and <strong>PostgreSQL</strong> to curate, transform, and distribute critical financial data while ensuring compliance with firm-wide Data Governance and regulatory standards.</li>
+              <li>Developed robust <strong>Python</strong> and <strong>Unix Shell</strong> automation frameworks for Data Profiling, automated quality checks, and Root-Cause Remediation — significantly improving data quality and operational efficiency.</li>
+              <li>Led high-impact <strong>SaaS Platform Migrations</strong> for core financial workflows, ensuring trusted data integration, structural consistency, and maintaining <strong>99.9% System Uptime</strong>.</li>
+              <li>Collaborated with Data Architects, data producers, and global stakeholders in an <strong>Agile / JIRA</strong> environment to translate complex financial business logic into scalable data definitions and workflow models.</li>
+              <li>Optimized legacy SQL queries and Pentaho workflows, improving <strong>Data Processing Performance by 40%</strong> through efficient transformation design and workflow tuning.</li>
+              <li>Enhanced platform Observability using <strong>AWS CloudWatch</strong>, reducing issue resolution time by <strong>25%</strong> through proactive monitoring, logging, and performance tuning.</li>
+              <li>Authored comprehensive Technical Documentation for ETL architectures, mapping specifications, and executed testing to ensure data integrity, compliance, and successful production deployments.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Previous Position - Internship -->        <!-- Previous Position - Internship -->
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <div class="tl-card-header">
+              <h3 class="tl-role">Solution Integration Intern</h3>
+              <div class="tl-badge-group">
+                <span class="tl-badge">Jan 2025 – Jun 2025</span>
+                <span class="tl-badge tl-badge-type">Internship</span>
+              </div>
+            </div>
+            <div class="tl-org-row">
+              <span class="tl-org">Jonas Collections &amp; Recovery India Pvt. Ltd.</span>
+              <span class="tl-org-sep"></span>
+              <span class="tl-loc"><i class="fas fa-location-dot" aria-hidden="true"></i> Bangalore, India · Remote</span>
+            </div>
+            <hr class="tl-divider" />
+            <ul class="timeline-list">
+              <li>Gained deep foundational exposure to <strong>fintech workflows</strong>, banking data compliance, debt management, and financial recovery frameworks.</li>
+              <li>Learned and actively applied core <strong>data warehousing and ETL development</strong> concepts by building data pipelines using <strong>Pentaho Data Integration (PDI)</strong> with MSSQL and PostgreSQL database systems.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         EDUCATION SECTION - Timeline Layout
+         ═══════════════════════════════════════════════════════════ -->
+    <section id="education">
+      <h2 class="section-title">Education</h2>
+      <div class="tl-wrap">
+
+        <!-- Bachelor's Degree -->
+        <!-- Bachelor's Degree -->
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <div class="tl-card-header">
+              <h3 class="tl-role">Shri Ramdeobaba College of Engineering and Management</h3>
+              <div class="tl-badge-group">
+                <span class="tl-badge">2021 – 2025</span>
+              </div>
+            </div>
+            <div class="tl-org-row">
+              <span class="tl-loc"><i class="fas fa-location-dot" aria-hidden="true"></i> Nagpur, Maharashtra, India</span>
+            </div>
+            <p class="tl-degree">BTech. Computer Science &amp; Engineering (Data Science)</p>
+            <span class="tl-score"><i class="fas fa-graduation-cap" aria-hidden="true"></i> CGPA &nbsp;8.38 / 10</span>
+          </div>
+        </div>
+
+        <!-- Higher Secondary Education -->        <!-- Higher Secondary Education -->
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <div class="tl-card-header">
+              <h3 class="tl-role">SMT. Ushabai Deshmukh Junior College</h3>
+              <div class="tl-badge-group">
+                <span class="tl-badge">2019 – 2021</span>
+              </div>
+            </div>
+            <div class="tl-org-row">
+              <span class="tl-loc"><i class="fas fa-location-dot" aria-hidden="true"></i> Achalpur, Amravati, Maharashtra, India</span>
+            </div>
+            <p class="tl-degree">Higher Secondary School Certificate (HSC)</p>
+            <span class="tl-score"><i class="fas fa-award" aria-hidden="true"></i> 90.50%</span>
+          </div>
+        </div>
+
+        <!-- Secondary Education -->        <!-- Secondary Education -->
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <div class="tl-card-header">
+              <h3 class="tl-role">Fatima Convent High School</h3>
+              <div class="tl-badge-group">
+                <span class="tl-badge">2018 – 2019</span>
+              </div>
+            </div>
+            <div class="tl-org-row">
+              <span class="tl-loc"><i class="fas fa-location-dot" aria-hidden="true"></i> Achalpur, Amravati, Maharashtra, India</span>
+            </div>
+            <p class="tl-degree">Secondary School Certificate (SSC)</p>
+            <span class="tl-score"><i class="fas fa-award" aria-hidden="true"></i> 91.40%</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         SKILLS SECTION - Bento Grid Layout
+         ═══════════════════════════════════════════════════════════ -->
+    <section id="skills">
+      <h2 class="section-title">Technical Arsenal</h2>
+      <div class="bento-skills-grid">
+
+        <!-- Data Engineering & Cloud Skills (Focus Card - spans 2 columns on desktop) -->
+        <div class="bento-card focus-card">
+          <div class="card-icon"><i class="fas fa-server" aria-hidden="true"></i></div>
+          <h3>Data Engineering &amp; Cloud</h3>
+          <div class="skill-tags">
+            <span>PostgreSQL</span>
+            <span>MSSQL</span>
+            <span>SQLite</span>
+            <span>MongoDB</span>
+            <span>Snowflake</span>
+            <span>AWS / CloudWatch</span>
+            <span>ETL Pipelines (PDI/Kettle)</span>
+            <span>Apache Iceberg</span>
+            <span>Data Curation &amp; Quality</span>
+            <span>Batch Processing</span>
+          </div>
+        </div>
+
+        <!-- Core Programming Languages -->
+        <div class="bento-card">
+          <div class="card-icon"><i class="fas fa-code" aria-hidden="true"></i></div>
+          <h3>Core Languages</h3>
+          <div class="skill-tags">
+            <span>Python</span>
+            <span>SQL</span>
+            <span>C++</span>
+            <span>C</span>
+            <span>JavaScript</span>
+          </div>
+        </div>
+
+        <!-- Web Development Technologies -->
+        <div class="bento-card">
+          <div class="card-icon"><i class="fas fa-layer-group" aria-hidden="true"></i></div>
+          <h3>Web Architecture</h3>
+          <div class="skill-tags">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>React.js</span>
+            <span>Node.js</span>
+            <span>Express.js</span>
+            <span>Flask</span>
+            <span>MongoDB</span>
+            <span>RESTful APIs</span>
+          </div>
+        </div>
+
+        <!-- Machine Learning & Deep Learning -->
+        <div class="bento-card">
+          <div class="card-icon"><i class="fas fa-brain" aria-hidden="true"></i></div>
+          <h3>Machine Learning</h3>
+          <div class="skill-tags">
+            <span>TensorFlow</span>
+            <span>Keras</span>
+            <span>Scikit-learn</span>
+            <span>Predictive Analysis</span>
+            <span>Neural Networks</span>
+            <span>CNN</span>
+            <span>RNN</span>
+          </div>
+        </div>
+
+        <!-- Developer Tools -->
+        <div class="bento-card">
+          <div class="card-icon"><i class="fas fa-screwdriver-wrench" aria-hidden="true"></i></div>
+          <h3>Developer Tools</h3>
+          <div class="skill-tags">
+            <span>Git / GitHub</span>
+            <span>Docker</span>
+            <span>Linux</span>
+            <span>Power BI</span>
+            <span>Tableau</span>
+            <span>Excel</span>
+            <span>VS Code</span>
+            <span>Agile / Scrum</span>
+          </div>
+        </div>
+
+        <!-- Core CS Concepts -->
+        <div class="bento-card">
+          <div class="card-icon"><i class="fas fa-microchip" aria-hidden="true"></i></div>
+          <h3>CS Concepts</h3>
+          <div class="skill-tags">
+            <span>Data Structures &amp; Algorithms</span>
+            <span>Operating Systems</span>
+            <span>Computer Networks</span>
+            <span>DBMS</span>
+            <span>Object Oriented Programming</span>
+          </div>
+        </div>
+
+        <!-- Soft Skills -->
+        <div class="bento-card">
+          <div class="card-icon"><i class="fas fa-people-group" aria-hidden="true"></i></div>
+          <h3>Soft Skills</h3>
+          <div class="skill-tags">
+            <span>Collaboration</span>
+            <span>Problem-Solving</span>
+            <span>Critical Thinking</span>
+            <span>Attention to Detail</span>
+            <span>Resilience</span>
+            <span>Negotiation</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="project">
+      <h2 class="section-title">Featured Work</h2>
+
+      <div class="carousel-container">
+        <button class="scroll-btn left-btn" id="leftBtn" type="button" aria-label="Scroll projects left"><i class="fas fa-chevron-left" aria-hidden="true"></i></button>
+
+        <div class="projects-carousel-wrapper">
+          <div class="projects-track" id="projectsTrack">
+
+            <!-- Realtime Chat Application -->
+            <article class="project-card">
+              <div class="project-media">
+                <img src="assets/img/project/ChatApp.png" alt="Realtime Chat Application preview" loading="lazy" />
+              </div>
+              <div class="project-info">
+                <h4><a href="https://moonlit-conkies-722532.netlify.app/" target="_blank" rel="noopener noreferrer">Realtime Chat Application</a></h4>
+                <div class="tech-stack-text">MERN, Socket.io, Redux-Toolkit, Tailwind CSS</div>
+                <p class="project-desc">Real-time messaging with image and video sharing. State management via Redux-Toolkit and responsive design with Tailwind CSS.</p>
+                <div class="project-links">
+                  <a href="https://github.com/darshanbhaiya/Chat-App" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i> Source</a>
+                  <a href="https://moonlit-conkies-722532.netlify.app/" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt" aria-hidden="true"></i> Live</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Order Management System -->
+            <article class="project-card">
+              <div class="project-media">
+                <img src="assets/img/project/OMS.png" alt="Order Management System preview" loading="lazy" />
+              </div>
+              <div class="project-info">
+                <h4><a href="https://github.com/darshanbhaiya/Management-System" target="_blank" rel="noopener noreferrer">Order Management System</a></h4>
+                <div class="tech-stack-text">HTML, CSS, JS, Python, Flask, SQLite, Jinja2</div>
+                <p class="project-desc">Built with Agile methodology for AVA Nutrients — inventory tracking, order processing, low-stock alerts, and actionable insights.</p>
+                <div class="project-links">
+                  <a href="https://github.com/darshanbhaiya/Management-System" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i> Source</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Health Checkup Recommendation System -->
+            <article class="project-card">
+              <div class="project-media">
+                <img src="assets/img/project/HealthCheckUpRecommendationSystem.png" alt="Health Recommendation Engine preview" loading="lazy" />
+              </div>
+              <div class="project-info">
+                <h4><a href="https://github.com/darshanbhaiya/Health-Checkup-Recommendation-System" target="_blank" rel="noopener noreferrer">Health Recommendation Engine</a></h4>
+                <div class="tech-stack-text">Python, Flask, Scikit-learn, SQLite, Jinja2</div>
+                <p class="project-desc">ML-based framework for doctor visit recommendations. Improved accuracy by 25% and reduced recommendation time by 30%.</p>
+                <div class="project-links">
+                  <a href="https://github.com/darshanbhaiya/Health-Checkup-Recommendation-System" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i> Source</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Landscape Identification System -->
+            <article class="project-card">
+              <div class="project-media">
+                <img src="assets/img/project/vdg.jpg" alt="Landscape Identification System preview" loading="lazy" />
+              </div>
+              <div class="project-info">
+                <h4><a href="https://github.com/darshanbhaiya/Landscape-Identification" target="_blank" rel="noopener noreferrer">Landscape Identification System</a></h4>
+                <div class="tech-stack-text">TensorFlow, Keras, CNN, RNN</div>
+                <p class="project-desc">Deep learning pipeline that accurately identifies landscapes from images for land cover classification and environmental monitoring.</p>
+                <div class="project-links">
+                  <a href="https://github.com/darshanbhaiya/Landscape-Identification" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i> Source</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- US Airlines Delay Analysis -->
+            <article class="project-card">
+              <div class="project-media">
+                <img src="assets/img/project/USAirlinesDelayAnalysis.png" alt="US Airlines Delay Analysis preview" loading="lazy" />
+              </div>
+              <div class="project-info">
+                <h4><a href="https://github.com/darshanbhaiya/Dashboards" target="_blank" rel="noopener noreferrer">US Airlines Delay Analysis</a></h4>
+                <div class="tech-stack-text">Tableau, Excel</div>
+                <p class="project-desc">Dashboard visualizing delay patterns, busiest airports, and airline-wise delays. Data cleaned using Excel Power Query.</p>
+                <div class="project-links">
+                  <a href="https://github.com/darshanbhaiya/Dashboards" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i> Source</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Machine Learning Notebooks -->
+            <article class="project-card">
+              <div class="project-media">
+                <img src="assets/img/project/ml.jpg" alt="Machine Learning Notebooks preview" loading="lazy" />
+              </div>
+              <div class="project-info">
+                <h4><a href="https://drive.google.com/drive/folders/1F7L85o9bsDP_yXOFQtraAQwUcRiEcs4m?usp=drive_link" target="_blank" rel="noopener noreferrer">Machine Learning Notebooks</a></h4>
+                <div class="tech-stack-text">Python, Scikit-learn, Google Colab</div>
+                <p class="project-desc">Collection of ML experiments and implementations covering supervised, unsupervised, and ensemble learning techniques.</p>
+                <div class="project-links">
+                  <a href="https://drive.google.com/drive/folders/1F7L85o9bsDP_yXOFQtraAQwUcRiEcs4m?usp=drive_link" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt" aria-hidden="true"></i> View</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Deep Learning Notebooks -->
+            <article class="project-card">
+              <div class="project-media">
+                <img src="assets/img/project/gan.jpg" alt="Deep Learning Notebooks preview" loading="lazy" />
+              </div>
+              <div class="project-info">
+                <h4><a href="https://drive.google.com/drive/folders/1wDwUmJRe_w1BnXJuOePGua1VdtUyvXU7?usp=sharing" target="_blank" rel="noopener noreferrer">Deep Learning Notebooks</a></h4>
+                <div class="tech-stack-text">TensorFlow, Keras, Google Colab</div>
+                <p class="project-desc">Deep learning experiments including CNNs, RNNs, and GANs built and trained using TensorFlow and Keras.</p>
+                <div class="project-links">
+                  <a href="https://drive.google.com/drive/folders/1wDwUmJRe_w1BnXJuOePGua1VdtUyvXU7?usp=sharing" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt" aria-hidden="true"></i> View</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Color Picker App -->
+            <article class="project-card">
+              <div class="project-media">
+                <img src="assets/img/project/ColorPickerApp.png" alt="Color Picker Tool preview" loading="lazy" />
+              </div>
+              <div class="project-info">
+                <h4><a href="https://rainbow-syrniki-e29e7e.netlify.app/" target="_blank" rel="noopener noreferrer">Color Picker App</a></h4>
+                <div class="tech-stack-text">React.js</div>
+                <p class="project-desc">Select colors from a palette and copy color codes to clipboard. Fully responsive design.</p>
+                <div class="project-links">
+                  <a href="https://github.com/darshanbhaiya/React-Color-picker-app" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i> Source</a>
+                  <a href="https://rainbow-syrniki-e29e7e.netlify.app/" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt" aria-hidden="true"></i> Live</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Stopwatch App -->
+            <article class="project-card">
+              <div class="project-media">
+                <img src="assets/img/project/StopWatch.png" alt="Stopwatch App preview" loading="lazy" />
+              </div>
+              <div class="project-info">
+                <h4><a href="https://66825fb2fab9d0f2a1b7b302--sparkling-kitten-397e4b.netlify.app/" target="_blank" rel="noopener noreferrer">Stopwatch App</a></h4>
+                <div class="tech-stack-text">React.js</div>
+                <p class="project-desc">A clean and elegant stopwatch application built with React.</p>
+                <div class="project-links">
+                  <a href="https://github.com/darshanbhaiya/React-Stop-Watch" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i> Source</a>
+                  <a href="https://66825fb2fab9d0f2a1b7b302--sparkling-kitten-397e4b.netlify.app/" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt" aria-hidden="true"></i> Live</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- To-Do App (React) -->
+            <article class="project-card">
+              <div class="project-media">
+                <img src="assets/img/project/ToDoReact.png" alt="To-Do App preview" loading="lazy" />
+              </div>
+              <div class="project-info">
+                <h4><a href="https://66825ca43d9dce08e2cba916--imaginative-panda-82a9b5.netlify.app/" target="_blank" rel="noopener noreferrer">To-Do App</a></h4>
+                <div class="tech-stack-text">React.js</div>
+                <p class="project-desc">Task manager with add, prioritize, and delete functionality. Built with React.</p>
+                <div class="project-links">
+                  <a href="https://github.com/darshanbhaiya/React-To-Do-List-App" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i> Source</a>
+                  <a href="https://66825ca43d9dce08e2cba916--imaginative-panda-82a9b5.netlify.app/" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt" aria-hidden="true"></i> Live</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Tlogger Blog App -->
+            <article class="project-card">
+              <div class="project-media">
+                <img src="assets/img/project/Tlogger.png" alt="Tlogger blog app preview" loading="lazy" />
+              </div>
+              <div class="project-info">
+                <h4><a href="https://github.com/darshanbhaiya/Tlogger-an-Express-website-for-blogs" target="_blank" rel="noopener noreferrer">Tlogger</a></h4>
+                <div class="tech-stack-text">HTML, CSS, JavaScript, Express.js, Handlebars</div>
+                <p class="project-desc">A simple blog application built with Express.js and Handlebars templating.</p>
+                <div class="project-links">
+                  <a href="https://github.com/darshanbhaiya/Tlogger-an-Express-website-for-blogs" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i> Source</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Toou Doou App -->
+            <article class="project-card">
+              <div class="project-media">
+                <img src="assets/img/project/ToouDoouApp.png" alt="Toou Doou App preview" loading="lazy" />
+              </div>
+              <div class="project-info">
+                <h4><a href="https://github.com/darshanbhaiya/Tooou-Doou" target="_blank" rel="noopener noreferrer">Toou Doou App</a></h4>
+                <div class="tech-stack-text">HTML, CSS, JavaScript, Python, Flask, Jinja2</div>
+                <p class="project-desc">A simple full-stack to-do application built with Flask and Jinja2 templating.</p>
+                <div class="project-links">
+                  <a href="https://github.com/darshanbhaiya/Tooou-Doou" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i> Source</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Portfolio Website -->
+            <article class="project-card">
+              <div class="project-media">
+                <img src="assets/img/project/Portfolio.png" alt="Portfolio Website preview" loading="lazy" />
+              </div>
+              <div class="project-info">
+                <h4><a href="https://darshanbhaiya.github.io/" target="_blank" rel="noopener noreferrer">Portfolio Website</a></h4>
+                <div class="tech-stack-text">HTML, CSS, JavaScript, Bootstrap</div>
+                <p class="project-desc">Personal portfolio website showcasing projects, experience, and skills. You are here.</p>
+                <div class="project-links">
+                  <a href="https://github.com/darshanbhaiya/darshanbhaiya.github.io" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i> Source</a>
+                  <a href="https://darshanbhaiya.github.io/" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt" aria-hidden="true"></i> Live</a>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <button class="scroll-btn right-btn" id="rightBtn" type="button" aria-label="Scroll projects right"><i class="fas fa-chevron-right" aria-hidden="true"></i></button>
+      </div>
+
+    </section>
+
+    <section id="contact">
+      <h2 class="section-title">Get In Touch</h2>
+      <div class="contact-container">
+        <div class="contact-info-block">
+          <h3>Let's start a conversation</h3>
+          <p>I am looking for challenging engineering opportunities, data architecture pipelines, and fullstack roles. Drop a note anytime.</p>
+          <div class="contact-methods">
+            <a href="mailto:darshanbhaiya0403@gmail.com" class="contact-method-item">
+              <i class="fas fa-envelope" aria-hidden="true"></i>
+              <span>darshanbhaiya0403@gmail.com</span>
+            </a>
+            <a href="tel:+918237551893" class="contact-method-item">
+              <i class="fas fa-phone" aria-hidden="true"></i>
+              <span>+91 8237551893</span>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h3>Digital Footprints</h3>
+          <p>Find my public notebooks and profiles active across networks:</p>
+          <div class="social-row">
+            <a href="https://github.com/darshanbhaiya" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile"><i class="fab fa-github" aria-hidden="true"></i></a>
+            <a href="https://www.linkedin.com/in/darshanbhaiya/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+            <a href="https://x.com/darshan_bhaiya" target="_blank" rel="noopener noreferrer" aria-label="X profile"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+            <a href="https://www.instagram.com/_darshanbhaiya_/" target="_blank" rel="noopener noreferrer" aria-label="Instagram profile"><i class="fab fa-instagram" aria-hidden="true"></i></a>
           </div>
         </div>
       </div>
     </section>
-    <!-- End About Me Section  -->
 
-    <hr />
-
-     <!-- ======= My Experience Section ======= -->
-
-     <section id="experience" class="resume">
-      <div class="container">
-        <div class="section-title">
-          <h2>Experience</h2>
-        </div>
-
-        <div class="row justify-content-center">
-          <div class="col-lg-8">
-            <h3 class="resume-title">
-              Jonas Collections and Recovery India Private Limited
-            </h3>
-
-            <div class="resume-item pb-0">
-              <h4>Solution Integration Associate</h4>
-              <h5>Jul 2025 - Current</h5>
-              <p><em>Nagpur, Maharashtra, India - Remote</em></p>
-              <p><em>Skills: MSSQL, PostgreSQL, PDI (Kettle), ETL design and development, REST APIs, Communication, Team Work, Resolving errors</em></p>
-            </div>
-
-            <div class="resume-item pb-0">
-              <h4>Solution Integration Intern</h4>
-              <h5>Jan 2025 - Jul 2025</h5>
-              <p><em>Bengaluru, Karnataka, India - Remote</em></p>
-              <p><em>Skills: MSSQL, PostgreSQL, PDI (Kettle), ETL design and development, REST APIs, Communication, Team Work, Resolving errors</em></p>
-            </div>
-
-           
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- End My Experience Section -->
-
-    <hr />
-
-    <!-- ======= My Education Section ======= -->
-
-    <section id="education" class="resume">
-      <div class="container">
-        <div class="section-title">
-          <h2>Education</h2>
-        </div>
-
-        <div class="row justify-content-center">
-          <div class="col-lg-8">
-            <h3 class="resume-title">
-              Shri Ramdeobaba College of Engineering and Management
-            </h3>
-            <div class="resume-item pb-0">
-              <h4>BTech. Computer Science and Engineering (Data Science)</h4>
-              <h5>2021 - 2025</h5>
-              <p><em>Nagpur, Maharashtra, India </em></p>
-              <p><em>CGPA: 8.38/10</em></p>
-            </div>
-
-            <h3 class="resume-title">SMT. Ushabai Deshmukh Junior College</h3>
-            <div class="resume-item pb-0">
-              <h4>Higher Secondary School Certificate (HSC)</h4>
-              <h5>2019 - 2021</h5>
-              <p><em>Achalpur, Amravati, Maharashtra, India </em></p>
-              <p><em>90.50 %</em></p>
-            </div>
-
-            <h3 class="resume-title">Fatima Convent High School</h3>
-            <div class="resume-item pb-0">
-              <h4>Secondary School Certificate (SSC)</h4>
-              <h5>2018 - 2019</h5>
-              <p><em>Achalpur, Amravati, Maharashtra, India </em></p>
-              <p><em>91.40 %</em></p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- End My Education Section -->
-
-    <hr />
-
-    <!-- ======= Skills Section ======= -->
-    <section id="skills" class="about">
-      <div class="container">
-        <div class="section-title">
-          <h2>Skills</h2>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-12 d-flex flex-column align-items-stretch">
-            <div class="content ps-lg-12 d-flex flex-column justify-content-center">
-              <div class="row">
-                <div class="col-lg-2 col-md-6" style="margin-bottom: 60px">
-                  <h3>Languages</h3>
-                  <br />
-                  <ul>
-                    <li>
-                      <i class="bi bi-chevron-right"></i> <strong>C</strong>
-                    </li>
-                    <li>
-                      <i class="bi bi-chevron-right"></i> <strong>C++</strong>
-                    </li>
-                    <li>
-                      <i class="bi bi-chevron-right"></i>
-                      <strong>Python</strong>
-                    </li>
-                    <li>
-                      <i class="bi bi-chevron-right"></i> <strong>SQL</strong>
-                    </li>
-                  </ul>
-                </div>
-                <div class="col-lg-2 col-md-6" style="margin-bottom: 60px">
-                  <h3>Web Dev</h3>
-                  <br />
-                  <ul>
-                    <li>
-                      <i class="bi bi-chevron-right"></i>
-                      <strong>HTML</strong>
-                    </li>
-                    <li>
-                      <i class="bi bi-chevron-right"></i>
-                      <strong>CSS</strong>
-                    </li>
-                    <li>
-                      <i class="bi bi-chevron-right"></i>
-                      <strong>JavaScript</strong>
-                    </li>
-                    <li>
-                      <i class="bi bi-chevron-right"></i>
-                      <strong>Flask</strong>
-                    </li>
-                    <li>
-                      <i class="bi bi-chevron-right"></i>
-                      <strong>SQLite</strong>
-                    </li>
-                    <li>
-                      <i class="bi bi-chevron-right"></i>
-                      <strong>MongoDB</strong>
-                    </li>
-                    <li>
-                      <i class="bi bi-chevron-right"></i>
-                      <strong>Express.js</strong>
-                    </li>
-                    <li>
-                      <i class="bi bi-chevron-right"></i>
-                      <strong>React.js</strong>
-                    </li>
-                    <li>
-                      <i class="bi bi-chevron-right"></i>
-                      <strong>Node.js</strong>
-                    </li>
-                  </ul>
-                </div>
-                <div class="col-lg-2 col-md-6" style="margin-bottom: 60px">
-                  <h3>ML & DL</h3>
-                  <br />
-                  <ul>
-                    <li>
-                      <i class="bi bi-chevron-right"></i>
-                      <strong>Scikit-learn</strong>
-                    </li>
-                    <li>
-                      <i class="bi bi-chevron-right"></i>
-                      <strong>TensorFlow</strong>
-                    </li>
-                    <li>
-                      <i class="bi bi-chevron-right"></i>
-                      <strong>Keras</strong>
-                    </li>
-                  </ul>
-                </div>
-                <div class="col-lg-2 col-md-6" style="margin-bottom: 60px">
-                  <h3>Tools</h3>
-                  <br />
-                  <ul>
-                    <li>
-                      <i class="bi bi-chevron-right"></i> <strong>Git</strong>
-                    </li>
-                    <li>
-                      <i class="bi bi-chevron-right"></i>
-                      <strong>GitHub</strong>
-                    </li>
-                    <li>
-                      <i class="bi bi-chevron-right"></i>
-                      <strong>Power BI</strong>
-                    </li>
-                    <li>
-                      <i class="bi bi-chevron-right"></i>
-                      <strong>Tableau</strong>
-                    </li>
-                    <li>
-                      <i class="bi bi-chevron-right"></i>
-                      <strong>VS Code</strong>
-                    </li>
-                    <li>
-                      <i class="bi bi-chevron-right"></i>
-                      <strong>Linux</strong>
-                    </li>
-                    <li>
-                      <i class="bi bi-chevron-right"></i>
-                      <strong>Excel</strong>
-                    </li>
-                  </ul>
-                </div>
-                <div class="col-lg-2 col-md-6" style="margin-bottom: 60px">
-                  <h3>Soft Skills</h3>
-                  <br />
-                  <ul>
-                    <li>
-                      <i class="bi bi-chevron-right"></i>
-                      <strong>Collaboration</strong>
-                    </li>
-                    <li>
-                      <i class="bi bi-chevron-right"></i>
-                      <strong>Problem-Solving</strong>
-                    </li>
-                    <li>
-                      <i class="bi bi-chevron-right"></i>
-                      <strong>Critical Thinking</strong>
-                    </li>
-                    <li>
-                      <i class="bi bi-chevron-right"></i>
-                      <strong>Attention to Detail</strong>
-                    </li>
-                    <li>
-                      <i class="bi bi-chevron-right"></i>
-                      <strong>Resilience</strong>
-                    </li>
-                    <li>
-                      <i class="bi bi-chevron-right"></i>
-                      <strong>Negotiation</strong>
-                    </li>
-                  </ul>
-                </div>
-                <div class="col-lg-2 col-md-6" style="margin-bottom: 60px">
-                  <h3>Concepts</h3>
-                  <br />
-                  <ul>
-                    <li>
-                      <i class="bi bi-chevron-right"></i>
-                      <strong>Data Structures and Algorithms</strong>
-                    </li>
-                    <li>
-                      <i class="bi bi-chevron-right"></i>
-                      <strong>Operating Systems</strong>
-                    </li>
-                    <li>
-                      <i class="bi bi-chevron-right"></i>
-                      <strong>Computer Networks</strong>
-                    </li>
-                    <li>
-                      <i class="bi bi-chevron-right"></i>
-                      <strong>Data Base Management Systems</strong>
-                    </li>
-                    <li>
-                      <i class="bi bi-chevron-right"></i>
-                      <strong>Object Oriented Programming</strong>
-                    </li>
-                    <li>
-                      <i class="bi bi-chevron-right"></i>
-                      <strong>Neural Networks</strong>
-                    </li>
-                    <li>
-                      <i class="bi bi-chevron-right"></i> <strong>CNN</strong>
-                    </li>
-                    <li>
-                      <i class="bi bi-chevron-right"></i> <strong>RNN</strong>
-                    </li>
-                    <li>
-                      <i class="bi bi-chevron-right"></i>
-                      <strong>Scrum / Agile</strong>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- End skills Section  -->
-
-    <hr />
-
-    <!-- ======= My Pojects Section ======= -->
-    <section id="project" class="services">
-      <div class="container">
-        <div class="section-title">
-          <h2>Projects</h2>
-        </div>
-
-        <div class="row">
-
-          <div class="col-md-6 col-lg-4 mb-5">
-            <div class="icon-box">
-              <h4 class="title">
-                <a href="https://darshanbhaiya.github.io/" target="_blank">Machine Learning Notebooks</a>
-              </h4>
-
-              <br />
-
-              <div class="portfolio-wrap">
-                <img src="assets/img/project/vdg.jpg" class="img-fluid" alt="" />
-              </div>
-
-              <br />
-
-              <ul>
-                <li>
-                  <strong>Collab Notebooks</strong>:
-                  <a href="https://drive.google.com/drive/folders/1F7L85o9bsDP_yXOFQtraAQwUcRiEcs4m?usp=drive_link" target="_blank">Link</a>
-                </li>
-              </ul>
-
-              <p class="description">• My ML work.</p>
-            </div>
-          </div>
-          
-          <div class="col-md-6 col-lg-4 mb-5">
-            <div class="icon-box">
-              <h4 class="title">
-                <a href="https://darshanbhaiya.github.io/" target="_blank">Deep Learning Notebooks</a>
-              </h4>
-
-              <br />
-
-              <div class="portfolio-wrap">
-                <img src="assets/img/project/gan.jpg" class="img-fluid" alt="" />
-              </div>
-
-              <br />
-
-              <ul>
-                <li>
-                  <strong>Collab Notebooks</strong>:
-                  <a href="https://drive.google.com/drive/folders/1wDwUmJRe_w1BnXJuOePGua1VdtUyvXU7?usp=sharing" target="_blank">Link</a>
-                </li>
-              </ul>
-
-              <p class="description">• My DL work.</p>
-            </div>
-          </div>
-
-
-          <div class="col-md-6 col-lg-4 mb-5">
-            <div class="icon-box">
-              <h4 class="title">
-                <a href="https://moonlit-conkies-722532.netlify.app/" target="_blank">Chat App</a>
-              </h4>
-
-              <br />
-
-              <div class="portfolio-wrap">
-                <img src="assets/img/project/ChatApp.png" class="img-fluid" alt="" />
-              </div>
-
-              <br />
-
-              <ul>
-                <li>
-                  <strong>Tech Stack</strong>: MongoDB, Express.js, React.js,
-                  Node.js, Socket.io, Redux-Toolkit, Tailwind CSS
-                </li>
-                <li>
-                  <strong>Website URL</strong>:
-                  <a href="https://moonlit-conkies-722532.netlify.app/" target="_blank">Link</a>
-                </li>
-                <li>
-                  <strong>Github URL</strong>:
-                  <a href="https://github.com/darshanbhaiya/Chat-App" target="_blank">Project Link</a>
-                </li>
-              </ul>
-
-              <p class="description">• Real-time messaging</p>
-              <p class="description">• Image and video sharing</p>
-              <p class="description">
-                • Responsive design using Tailwind CSS
-              </p>
-              <p class="description">
-                • State management with Redux-Toolkit.
-              </p>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-4 mb-5">
-            <div class="icon-box">
-              <h4 class="title">
-                <a href="https://66825fb2fab9d0f2a1b7b302--sparkling-kitten-397e4b.netlify.app/" target="_blank">Stop
-                  Watch</a>
-              </h4>
-
-              <br />
-
-              <div class="portfolio-wrap">
-                <img src="assets/img/project/StopWatch.png" class="img-fluid" alt="" />
-              </div>
-
-              <br />
-
-              <ul>
-                <li><strong>Tech Stack</strong>: React.js</li>
-                <li>
-                  <strong>Website URL</strong>:
-                  <a href="https://66825fb2fab9d0f2a1b7b302--sparkling-kitten-397e4b.netlify.app/"
-                    target="_blank">Link</a>
-                </li>
-                <li>
-                  <strong>Github URL</strong>:
-                  <a href="https://github.com/darshanbhaiya/React-Stop-Watch" target="_blank">Project Link</a>
-                </li>
-              </ul>
-
-              <p class="description">
-                • A simple and elegant stopwatch application built using
-                React.
-              </p>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-4 mb-5">
-            <div class="icon-box">
-              <h4 class="title">
-                <a href="https://github.com/darshanbhaiya/Management-System" target="_blank">ORDER MANAGEMENT SYSTEM (OMS) FOR AVA SOY NUTRIENTS</a>
-              </h4>
-
-              <br />
-
-              <div class="portfolio-wrap">
-                <img src="assets/img/project/OMS.png" class="img-fluid" alt="" />
-              </div>
-
-              <br />
-
-              <ul>
-                <li>
-                  <strong>Tech Stack</strong>: HTML, CSS, JavaScript, Python,
-                  Flask, SQLite, Jinja2
-                </li>
-                <!-- <li>
-                  <strong>Website URL</strong>:
-                  <a href="" target="_blank">Link</a>
-                </li> -->
-                <li>
-                  <strong>Github URL</strong>:
-                  <a href="https://github.com/darshanbhaiya/Management-System" target="_blank">Project Link</a>
-                </li>
-              </ul>
-
-              <p class="description">
-                • Using agile methodology, engineered an Order Management
-                System (OMS) for AVA Nutrients, enabling efficient customer
-                management, inventory tracking and order processing including
-                alerts for low inventory levels, production monitoring and
-                auto updates of information.
-              </p>
-              <p class="description">
-                • Implemented actionable insights features, leading to
-                optimized inventory levels and improved decision-making.
-              </p>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-4 mb-5">
-            <div class="icon-box">
-              <h4 class="title">
-                <a href="https://github.com/darshanbhaiya/Landscape-Identification" target="_blank">LANDSCAPE
-                  IDENTIFICATION SYSTEM</a>
-              </h4>
-
-              <br />
-
-              <div class="portfolio-wrap">
-                <img src="assets/img/project/ml.jpg" class="img-fluid" alt="" />
-              </div>
-
-              <br />
-
-              <ul>
-                <li>
-                  <strong>Tech Stack</strong>: TensorFlow, Keras, CNN, RNN
-                </li>
-                <!-- <li><strong>Website URL</strong>: <a href="" target="_blank">Link</a></li> -->
-                <li>
-                  <strong>Github URL</strong>:
-                  <a href="https://github.com/darshanbhaiya/Landscape-Identification" target="_blank">Project Link</a>
-                </li>
-              </ul>
-
-              <p class="description">
-                • Developed a sophisticated deep learning project capable of
-                accurately identifying landscapes from input images.
-              </p>
-              <p class="description">
-                • Used to classify land cover and environmental monitoring.
-              </p>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-4 mb-5">
-            <div class="icon-box">
-              <h4 class="title">
-                <a href="https://github.com/darshanbhaiya/Health-Checkup-Recommendation-System" target="_blank">HEALTH
-                  CHECKUP RECOMMENDATION SYSTEM
-                </a>
-              </h4>
-
-              <br />
-
-              <div class="portfolio-wrap">
-                <img src="assets/img/project/HealthCheckUpRecommendationSystem.png" class="img-fluid" alt="" />
-              </div>
-
-              <br />
-
-              <ul>
-                <li>
-                  <strong>Tech Stack</strong>: HTML, CSS, JavaScript, Python,
-                  Flask, Jinja2, Scikit-learn, SQLite
-                </li>
-                <!-- <li><strong>Website URL</strong>: <a href="" target="_blank">Link</a></li> -->
-                <li>
-                  <strong>Github URL</strong>:
-                  <a href="https://github.com/darshanbhaiya/Health-Checkup-Recommendation-System"
-                    target="_blank">Project Link</a>
-                </li>
-              </ul>
-
-              <p class="description">
-                • Implemented ML-based framework for precise doctor visit
-                recommendations.
-              </p>
-              <p class="description">
-                • Analyzed data from diverse Health Models for conclusive
-                results.
-              </p>
-              <p class="description">
-                • Improved accuracy by 25% and reduced recommendation time by
-                30%.
-              </p>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-4 mb-5">
-            <div class="icon-box">
-              <h4 class="title">
-                <a href="https://github.com/darshanbhaiya/Dashboards" target="_blank">US AIRLINES DELAY ANALYSIS</a>
-              </h4>
-
-              <br />
-
-              <div class="portfolio-wrap">
-                <img src="assets/img/project/USAirlinesDelayAnalysis.png" class="img-fluid" alt="" />
-              </div>
-
-              <br />
-
-              <ul>
-                <li><strong>Tech Stack</strong>: Tableau Dashboard, Excel</li>
-                <!-- <li><strong>Website URL</strong>: <a href="" target="_blank">Link</a></li> -->
-                <li>
-                  <strong>Github URL</strong>:
-                  <a href="https://github.com/darshanbhaiya/Dashboards" target="_blank">Project Link</a>
-                </li>
-              </ul>
-
-              <p class="description">
-                • Insights on delay percentage, average delay time, busiest
-                airports by flights and runways, airline-wise delay.
-              </p>
-              <p class="description">
-                • Visualized delay patterns and identified key factors
-                influencing flight delays, aiding in strategic decision
-                making.
-              </p>
-              <p class="description">
-                • Used Excel Power Query to clean data.
-              </p>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-4 mb-5">
-            <div class="icon-box">
-              <h4 class="title">
-                <a href="https://github.com/darshanbhaiya/Tooou-Doou" target="_blank">Toou Doou App</a>
-              </h4>
-
-              <br />
-
-              <div class="portfolio-wrap">
-                <img src="assets/img/project/ToouDoouApp.png" class="img-fluid" alt="" />
-              </div>
-
-              <br />
-
-              <ul>
-                <li>
-                  <strong>Tech Stack</strong>: HTML, CSS, JavaScript, Python,
-                  Flask, Jinja2
-                </li>
-                <!-- <li><strong>Website URL</strong>: <a href="" target="_blank">Link</a></li> -->
-                <li>
-                  <strong>Github URL</strong>:
-                  <a href="https://github.com/darshanbhaiya/Tooou-Doou" target="_blank">Project Link</a>
-                </li>
-              </ul>
-
-              <p class="description">• A simple To Do app.</p>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-4 mb-5">
-            <div class="icon-box">
-              <h4 class="title">
-                <a href="https://github.com/darshanbhaiya/Tlogger-an-Express-website-for-blogs"
-                  target="_blank">Tlogger</a>
-              </h4>
-
-              <br />
-
-              <div class="portfolio-wrap">
-                <img src="assets/img/project/Tlogger.png" class="img-fluid" alt="" />
-              </div>
-
-              <br />
-
-              <ul>
-                <li>
-                  <strong>Tech Stack</strong>: HTML, CSS , JavaScript,
-                  Express.js, Handlebars
-                </li>
-                <!-- <li><strong>Website URL</strong>: <a href="" target="_blank">Link</a></li> -->
-                <li>
-                  <strong>Github URL</strong>:
-                  <a href="https://github.com/darshanbhaiya/Tlogger-an-Express-website-for-blogs"
-                    target="_blank">Project Link</a>
-                </li>
-              </ul>
-
-              <p class="description">• A simple blog app.</p>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-4 mb-5">
-            <div class="icon-box">
-              <h4 class="title">
-                <a href="https://66825ca43d9dce08e2cba916--imaginative-panda-82a9b5.netlify.app/" target="_blank">To-Do
-                  App</a>
-              </h4>
-
-              <br />
-
-              <div class="portfolio-wrap">
-                <img src="assets/img/project/ToDoReact.png" class="img-fluid" alt="" />
-              </div>
-
-              <br />
-
-              <ul>
-                <li><strong>Tech Stack</strong>: React.js</li>
-                <li>
-                  <strong>Website URL</strong>:
-                  <a href="https://66825ca43d9dce08e2cba916--imaginative-panda-82a9b5.netlify.app/"
-                    target="_blank">Link</a>
-                </li>
-                <li>
-                  <strong>Github URL</strong>:
-                  <a href="https://github.com/darshanbhaiya/React-To-Do-List-App" target="_blank">Project Link</a>
-                </li>
-              </ul>
-
-              <p class="description">
-                • A simple and elegant to-do application built using React.
-              </p>
-              <p class="description">• Add new tasks</p>
-              <p class="description">• Set Priority.</p>
-              <p class="description">• Delete tasks.</p>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-4 mb-5">
-            <div class="icon-box">
-              <h4 class="title">
-                <a href="https://rainbow-syrniki-e29e7e.netlify.app/" target="_blank">Color Picker App</a>
-              </h4>
-
-              <br />
-
-              <div class="portfolio-wrap">
-                <img src="assets/img/project/ColorPickerApp.png" class="img-fluid" alt="" />
-              </div>
-
-              <br />
-
-              <ul>
-                <li><strong>Tech Stack</strong>: React.js</li>
-                <li>
-                  <strong>Website URL</strong>:
-                  <a href="https://rainbow-syrniki-e29e7e.netlify.app/" target="_blank">Link</a>
-                </li>
-                <li>
-                  <strong>Github URL</strong>:
-                  <a href="https://github.com/darshanbhaiya/React-Color-picker-app" target="_blank">Project Link</a>
-                </li>
-              </ul>
-
-              <p class="description">• Select colors from a color palette.</p>
-              <p class="description">• Copy color codes to clipboard</p>
-              <p class="description">• Responsive design.</p>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-4 mb-5">
-            <div class="icon-box">
-              <h4 class="title">
-                <a href="https://darshanbhaiya.github.io/" target="_blank">Portfolio Website</a>
-              </h4>
-
-              <br />
-
-              <div class="portfolio-wrap">
-                <img src="assets/img/project/Portfolio.png" class="img-fluid" alt="" />
-              </div>
-
-              <br />
-
-              <ul>
-                <li>
-                  <strong>Tech Stack</strong>: HTML, CSS, JavaScript,
-                  Bootstrap
-                </li>
-                <li>
-                  <strong>Website URL</strong>:
-                  <a href="https://darshanbhaiya.github.io/" target="_blank">Link</a>
-                </li>
-                <li>
-                  <strong>Github URL</strong>:
-                  <a href="https://github.com/darshanbhaiya/darshanbhaiya.github.io" target="_blank">Project Link</a>
-                </li>
-              </ul>
-
-              <p class="description">• You are here.</p>
-            </div>
-          </div>
-
-          <!-- ______________________________ -->
-          
-          
-      
-          
-        </div>
-      </div>
-    </section>
-    <!-- End My Services Section -->
-
-    <hr />
-
-    <!-- ======= Contact Me Section ======= -->
-    <section id="contact" class="contact">
-      <div class="container">
-        <div class="section-title">
-          <h2>Contact Me</h2>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="row">
-              <div class="col-md-12">
-                <div class="info-box">
-                  <i class="bx bx-share-alt"></i>
-                  <h3>Social Profiles</h3>
-                  <div class="social-links">
-                    <a href="https://x.com/darshan_bhaiya?t=Dzq8Bb0WGQQ-SzwmIeTvGw&s=09" target="_blank"
-                      class="twitter"><i class="bi bi-twitter"></i></a>
-                    <a href="https://www.instagram.com/_darshanbhaiya_/" target="_blank" class="instagram"><i
-                        class="bi bi-instagram"></i></a>
-                    <a href="https://www.linkedin.com/in/darshanbhaiya/" target="_blank" class="linkedin"><i
-                        class="bi bi-linkedin"></i></a>
-                    <a href="https://github.com/darshanbhaiya" target="_blank" class="github"><i
-                        class="bi bi-github"></i></a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="info-box mt-4">
-                  <a href="mailto:darshanbhaiya0403@gmail.com">
-                    <i class="bx bx-envelope"></i>
-                    <h3>Email Me</h3>
-                  </a>
-                  <p>darshanbhaiya0403@gmail.com</p>
-                </div>
-
-              </div>
-              <div class="col-md-6">
-                <div class="info-box mt-4">
-                  <i class="bx bx-phone-call"></i>
-                  <h3>Call Me</h3>
-                  <p>+91 8237551893</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- End Contact Me Section -->
   </main>
-  <!-- End #main -->
 
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-    <div class="container">
-      <h3>Darshan Bhaiya</h3>
-      <p>
-        Sometimes getting lost is part of the adventure,<br />
-        though you can't control the wind, you can adjust your sails.
-      </p>
-      <div class="social-links">
-        <a href="https://x.com/darshan_bhaiya?t=Dzq8Bb0WGQQ-SzwmIeTvGw&s=09" target="_blank" class="twitter"><i
-            class="bi bi-twitter"></i></a>
-        <a href="https://www.instagram.com/_darshanbhaiya_/" target="_blank" class="instagram"><i
-            class="bi bi-instagram"></i></a>
-        <a href="https://www.linkedin.com/in/darshanbhaiya/" target="_blank" class="linkedin"><i
-            class="bi bi-linkedin"></i></a>
-        <a href="https://github.com/darshanbhaiya" target="_blank" class="github"><i class="bi bi-github"></i></a>
-      </div>
-
-      <div class="credits">
-        Designed by
-        <a href="https://bootstrapmade.com/">Darshan Bhaiya </a>with 🤍
-      </div>
-    </div>
+  <!-- ═══════════════════════════════════════════════════════════
+       FOOTER
+       ═══════════════════════════════════════════════════════════ -->
+  <footer>
+    <p>"Though you can't control the wind, you can adjust your sails."</p>
+    <p>&copy; 2026 <span class="signature">Darshan Bhaiya</span>. Designed with intent.</p>
   </footer>
-  <!-- End Footer -->
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
+  <!-- ═══════════════════════════════════════════════════════════
+       EXTERNAL JAVASCRIPT LIBRARY - Typed.js for Hero Animation
+       ═══════════════════════════════════════════════════════════ -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
-
-  <!-- Hide loader script -->
   <script>
-    window.addEventListener("load", function () {
-      var loaderWrapper = document.getElementById("loader-wrapper");
+    /* ═══════════════════════════════════════════════════════════
+       MAIN APPLICATION JAVASCRIPT
+       All functionality wrapped in IIFE (Immediately Invoked Function Expression)
+       to avoid polluting global namespace
+       ═══════════════════════════════════════════════════════════ */
+    (function () {
+      'use strict';
 
-      // Hide loader 3 seconds after all files are loaded
-      setTimeout(function () {
-        loaderWrapper.style.display = "none";
-      }, 3000); // 3000 milliseconds = 3 seconds
-    });
+      /* ─────────────────────────────────────────────────────────
+         TYPED.JS INITIALIZATION - Hero Section Animated Text
+         ─────────────────────────────────────────────────────────
+         Creates typing animation effect for role/position titles
+         Fallback to static text if Typed.js fails to load
+      */
+      var typedTarget = document.querySelector(".typing");
+
+      if (typedTarget && window.Typed) {
+        new Typed(".typing", {
+          strings: ["Problem Solver", "Data Scientist", "Full-Stack Developer", "Software Engineer"],
+          loop: true,            // Continuously loop through strings
+          typeSpeed: 50,         // Typing speed in milliseconds
+          backSpeed: 30,         // Backspacing speed
+          backDelay: 2000        // Delay before backspacing starts
+        });
+      } else if (typedTarget) {
+        // Fallback if Typed.js library doesn't load
+        typedTarget.textContent = "Problem Solver";
+      }
+
+      /* ─────────────────────────────────────────────────────────
+         MOBILE NAVIGATION MENU TOGGLE
+         ─────────────────────────────────────────────────────────
+         Handles opening/closing of mobile navigation menu
+         Updates ARIA attributes for screen reader accessibility
+      */
+      var menuButton = document.querySelector(".mobile-menu-toggle");
+      var menu = document.getElementById("primaryMenu");
+
+      if (menuButton && menu) {
+        // Toggle menu on button click
+        menuButton.addEventListener("click", function () {
+          var isOpen = menu.classList.toggle("is-open");
+          
+          // Update ARIA attributes for accessibility
+          menuButton.setAttribute("aria-expanded", String(isOpen));
+          menuButton.setAttribute("aria-label", isOpen ? "Close navigation menu" : "Open navigation menu");
+          
+          // Change icon between hamburger and close (X)
+          menuButton.innerHTML = isOpen
+            ? '<i class="fas fa-xmark" aria-hidden="true"></i>'
+            : '<i class="fas fa-bars" aria-hidden="true"></i>';
+        });
+
+        // Close mobile menu when any navigation link is clicked
+        menu.querySelectorAll("a").forEach(function (link) {
+          link.addEventListener("click", function () {
+            menu.classList.remove("is-open");
+            menuButton.setAttribute("aria-expanded", "false");
+            menuButton.setAttribute("aria-label", "Open navigation menu");
+            menuButton.innerHTML = '<i class="fas fa-bars" aria-hidden="true"></i>';
+          });
+        });
+      }
+
+      /* ─────────────────────────────────────────────────────────
+         PROJECTS CAROUSEL - Auto-scroll & Manual Navigation
+         ─────────────────────────────────────────────────────────
+         Implements horizontal scrolling carousel for project cards
+         Features:
+         - Auto-play with 3.5 second intervals
+         - Manual navigation with left/right buttons
+         - Pauses on hover/focus for accessibility
+         - Disabled on mobile (uses stacked layout instead)
+      */
+      var track = document.getElementById("projectsTrack");
+      var leftBtn = document.getElementById("leftBtn");
+      var rightBtn = document.getElementById("rightBtn");
+      var carouselTimer = null;
+      var scrollAmount = 330; // Pixels to scroll per click
+
+      /* Check if carousel is scrollable (content wider than container) */
+      function canScrollProjects() {
+        return track && track.scrollWidth > track.clientWidth + 8;
+      }
+
+      /* Stop auto-play timer */
+      function stopAutoPlay() {
+        if (carouselTimer) {
+          clearInterval(carouselTimer);
+          carouselTimer = null;
+        }
+      }
+
+      /* Start auto-play - scrolls carousel automatically every 3.5 seconds */
+      function startAutoPlay() {
+        stopAutoPlay(); // Clear any existing timer
+
+        // Don't auto-play if not scrollable or on mobile
+        if (!canScrollProjects() || window.matchMedia("(max-width: 640px)").matches) {
+          return;
+        }
+
+        carouselTimer = setInterval(function () {
+          // Re-check if still scrollable (viewport might have changed)
+          if (!canScrollProjects()) {
+            stopAutoPlay();
+            return;
+          }
+
+          // Loop back to start if reached the end
+          if (track.scrollLeft + track.clientWidth >= track.scrollWidth - 12) {
+            track.scrollTo({ left: 0, behavior: "smooth" });
+          } else {
+            track.scrollBy({ left: scrollAmount, behavior: "smooth" });
+          }
+        }, 3500); // 3.5 second interval
+      }
+
+      /* Initialize carousel controls if elements exist */
+      if (track && leftBtn && rightBtn) {
+        // Left button - scroll backward
+        leftBtn.addEventListener("click", function () {
+          track.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+        });
+
+        // Right button - scroll forward
+        rightBtn.addEventListener("click", function () {
+          track.scrollBy({ left: scrollAmount, behavior: "smooth" });
+        });
+
+        var carouselContainer = document.querySelector(".carousel-container");
+
+        if (carouselContainer) {
+          // Pause auto-play when user interacts with carousel
+          carouselContainer.addEventListener("mouseenter", stopAutoPlay);  // Mouse hover
+          carouselContainer.addEventListener("mouseleave", startAutoPlay); // Mouse leave
+          carouselContainer.addEventListener("focusin", stopAutoPlay);     // Keyboard focus
+          carouselContainer.addEventListener("focusout", startAutoPlay);   // Keyboard blur
+        }
+
+        // Restart auto-play on window resize (responsive behavior)
+        window.addEventListener("resize", startAutoPlay);
+        
+        // Initialize auto-play on page load
+        startAutoPlay();
+      }
+
+    })(); // End of IIFE
   </script>
-
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7118501973423931"
-     crossorigin="anonymous"></script>
-
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7118501973423931"
-     crossorigin="anonymous"></script>   
 </body>
-
 </html>
