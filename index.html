@@ -353,6 +353,7 @@
       font-size: 1.08rem;
       line-height: 1.85;
       font-weight: 400;
+      text-align: justify;
     }
 
     /* First Paragraph - Emphasized */
@@ -361,6 +362,7 @@
       color: var(--text-main);
       font-weight: 600;
       line-height: 1.6;
+      text-align: justify;
     }
 
     .about-text strong {
@@ -821,24 +823,23 @@
       color: #444444;
       font-size: 0.93rem;
       line-height: 1.75;
-      padding-left: 1.35rem;
+      padding-left: 0;
       position: relative;
+      text-align: justify;
     }
 
     .resume-points li::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 0.68em;
-      width: 5px;
-      height: 5px;
-      border-radius: 50%;
-      background: #aaaaaa;
+      content: none;
     }
 
     .resume-points strong {
       color: #111111;
       font-weight: 700;
+    }
+
+    .resume-points li + li {
+      border-top: 1px solid #ebebeb;
+      padding-top: 0.6rem;
     }
 
     /* Education score / grade pill */
@@ -1633,7 +1634,7 @@
       .resume-points li {
         font-size: 0.87rem;
         line-height: 1.7;
-        padding-left: 1.1rem;
+        padding-left: 0;
       }
 
       .resume-score {
